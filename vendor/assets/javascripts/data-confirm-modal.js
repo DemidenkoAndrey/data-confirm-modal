@@ -38,9 +38,9 @@
   var defaults = {
     title: 'Are you sure?',
     commit: 'Confirm',
-    commitClass: 'btn-danger',
+    commitClass: 'btn-secondary',
     cancel: 'Cancel',
-    cancelClass: 'btn-default',
+    cancelClass: 'btn-secondary',
     fade: true,
     verifyClass: 'form-control',
     elements: ['a[data-confirm]', 'button[data-confirm]', 'input[type=submit][data-confirm]'],
@@ -129,16 +129,18 @@
 
     var modal = $(
       '<div id="'+id+'" class="modal '+modalClass+' '+fade+'" tabindex="-1" role="dialog" aria-labelledby="'+id+'Label" aria-hidden="true">' +
-        '<div class="modal-dialog">' +
+        '<div class="modal-dialog modal-lg">' +
           '<div class="modal-content">' +
             '<div class="modal-header">' +
-              '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' +
-              '<h4 id="'+id+'Label" class="modal-title"></h4> ' +
+              '<h5 id="'+id+'Label" class="h1 modal-title"></h5>' +
+              '<button type="button" class="close" data-dismiss="modal">' +
+                '<span class="icon-close"></span>' +
+              '</button>' +
             '</div>' +
             '<div class="modal-body"></div>' +
             '<div class="modal-footer">' +
-              '<button class="btn cancel" data-dismiss="modal" aria-hidden="true"></button>' +
               '<button class="btn commit"></button>' +
+              '<button class="btn cancel" data-dismiss="modal"></button>' +
             '</div>'+
           '</div>'+
         '</div>'+
